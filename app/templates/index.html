@@ -3,8 +3,19 @@
 {% block body %}
 
 <tbody>
-    
-    <h1>RenderDEMO</h1>
+
+    <h1>文字数・バイト数を数えるWebアプリ</h1>
+
+    <form method="post">
+        <textarea name="text" rows="5" cols="40"
+            placeholder="ここに文字を入力">{{ text }}</textarea><br>
+        <button type="submit">カウント</button>
+    </form>
+
+    {% if text %}
+        <p>文字数：{{ char_count }} 文字</p>
+        <p>バイト数（UTF-8）：{{ byte_count }} バイト</p>
+    {% endif %}
     
 </tbody>
 
