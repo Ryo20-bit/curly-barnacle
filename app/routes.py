@@ -2,7 +2,7 @@ from flask import Blueprint, redirect, url_for, Flask, jsonify, render_template,
 
 main = Blueprint('main', __name__)
 
-@main.route('/')
+@main.route("/", methods=["GET", "POST"])
 def index():
 
     text = ""
